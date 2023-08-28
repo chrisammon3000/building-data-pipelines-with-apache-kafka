@@ -1,0 +1,15 @@
+{
+    "services": {
+        "elasticsearch": {
+            "env": {
+                "ssh_cidr": "0.0.0.0/0",
+                "ssh_key_name": "ec2-elasticsearch-key-pair",
+                "ebs_volume_size": 32
+            }
+        }
+    },
+    "tags": {
+        "org": "chrisammon3000",
+        "app": "kafka-data-pipeline"
+    }
+}
