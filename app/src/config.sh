@@ -11,9 +11,7 @@ chmod +x /usr/local/bin/docker-compose
 docker-compose version
 
 # # Application specific configuration
-# mkdir -p /opt/app /opt/data/weaviate_data
+# mkdir -p /opt/app /opt/data/opensearch-data1 /opt/data/opensearch-data2
 # chown -R ec2-user:ec2-user /opt/app /opt/data
-# git clone https://github.com/chrisammon3000/aws-cdk-ec2-weaviate.git /opt/app
+# git clone https://github.com/chrisammon3000/building-data-pipelines-with-apache-kafka.git /opt/app
 # cd /opt/app && docker-compose up -d
-
-docker run -d -p 9200:9200 -p 9600:9600 -e "discovery.type=single-node" opensearchproject/opensearch:latest

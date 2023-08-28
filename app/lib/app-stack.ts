@@ -2,7 +2,7 @@ import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { SharedResources } from './shared';
 import { Database } from './database';
-import { Ec2Elasticsearch } from './elasticsearch';
+import { Ec2OpenSearch } from './opensearch';
 
 export class KafkaDataPipelineStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
@@ -14,7 +14,7 @@ export class KafkaDataPipelineStack extends cdk.Stack {
     const database = new Database(this, 'Database', {
         vpc
     });
-    const ec2Elasticsearch = new Ec2Elasticsearch(this, 'Ec2Elasticsearch', {
+    const ec2OpenSearch = new Ec2OpenSearch(this, 'Ec2OpenSearch', {
         vpc
     });
   }
